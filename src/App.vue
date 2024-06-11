@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 
-const value1 = +x == null;
+var pattern1 = /\x20/;
 </script>
 
 <template>

@@ -49,6 +49,13 @@ export default [
       'no-cond-assign': ['error', 'except-parens'],
       'no-const-assign': 'error',
       'no-constant-binary-expression': 'error',
+      'no-constant-condition': ['error', {
+        checkLoops: 'allExceptWhileTrue'
+      }],
+      'no-constructor-return': 'off',
+      'no-control-regex': 'error',
+      'no-debugger': 'error',
+      'no-dupe-args': 'error',
 
       // // @stylistic eslint rules
       // // '@stylistic/array-bracket-spacing': ["error", "always", { "arrayInArrays": false}],
