@@ -1,8 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-const x = [ ['abcd', 'abcd']
-]
+
+const value1 = +x == null;
 </script>
 
 <template>

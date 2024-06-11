@@ -46,6 +46,9 @@ export default [
       'no-await-in-loop': 'error',
       'no-class-assign': 'error',
       'no-compare-neg-zero': 'error',
+      'no-cond-assign': ['error', 'except-parens'],
+      'no-const-assign': 'error',
+      'no-constant-binary-expression': 'error',
 
       // // @stylistic eslint rules
       // // '@stylistic/array-bracket-spacing': ["error", "always", { "arrayInArrays": false}],
