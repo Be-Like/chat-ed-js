@@ -44,7 +44,8 @@ export default [
       'getter-return': ['error', { allowImplicit: false }],
       'no-async-promise-executor': 'error',
       'no-await-in-loop': 'error',
-      'no-class-assign': 'error'
+      'no-class-assign': 'error',
+      'no-compare-neg-zero': 'error',
 
       // // @stylistic eslint rules
       // // '@stylistic/array-bracket-spacing': ["error", "always", { "arrayInArrays": false}],
