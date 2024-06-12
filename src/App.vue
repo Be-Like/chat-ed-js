@@ -1,8 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-
-var pattern1 = /\x20/;
 </script>
 
 <template>
