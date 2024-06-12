@@ -77,17 +77,38 @@ export default [
       'no-loss-of-precision': 'error',
       'no-misleading-character-class': 'error',
       'no-new-native-nonconstructor': 'error',
-      'no-object-calls': 'error',
+      'no-obj-calls': 'error',
       'no-promise-executor-return': 'off',
       'no-prototype-builtins': 'error',
       'no-self-assign': 'error',
       'no-self-compare': 'error',
       'no-setter-return': 'error',
       'no-sparse-arrays': 'error',
+      'no-template-curly-in-string': 'warn',
+      'no-this-before-super': 'error',
+      'no-undef': 'error',
+      'no-global-assign': 'error',
+      'no-redeclare': 'error',
+      'no-unexpected-multiline': 'error',
+      'no-unmodified-loop-condition': 'error',
+      'no-unreachable': 'error',
+      'no-unreachable-loop': 'warn',
+      'no-unsafe-finally': 'error',
+      'no-unsafe-negation': 'error',
+      'no-unsafe-optional-chaining': ['error', {
+        disallowArithmeticOperators: true
+      }],
+      'no-unused-private-class-members': 'error',
+      'no-unused-vars': 'error',
+      'no-use-before-define': 'error',
 
 
       // // @stylistic eslint rules
       // // '@stylistic/array-bracket-spacing': ["error", "always", { "arrayInArrays": false}],
+      // '@stylistic/js/semi: ['error', {
+      //    omitLastInOneLineBlock: true,
+      //    omitLastInOneLineClassBody: true,
+      //  } // TODO: change .prettierrc.json to require semicolons
       //
       // // JSDoc rules
       // 'jsdoc/check-access': 1,
