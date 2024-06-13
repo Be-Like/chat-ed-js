@@ -101,6 +101,21 @@ export default [
       'no-unused-private-class-members': 'error',
       'no-unused-vars': 'error',
       'no-use-before-define': 'error',
+      'no-useless-assignment': 'error',
+      'no-useless-backreference': 'error',
+      'require-atomic-updates': 'error',
+      'use-isnan': ['error', {
+        enforceForSwitchCase: true,
+        enforceForIndexOf: false
+      }],
+      'valid-typeof': 'error',
+      'camelcase': ['error', {
+        properties: 'always',
+        ignoreDestructuring: true
+      }],
+      'default-case-last': 'error',
+      'default-param-last': 'error',
+      'eqeqeq': ["error", "always", {"null": "ignore"}],
 
 
       // // @stylistic eslint rules
