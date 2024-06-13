@@ -115,7 +115,11 @@ export default [
       }],
       'default-case-last': 'error',
       'default-param-last': 'error',
-      'eqeqeq': ["error", "always", {"null": "ignore"}],
+      'eqeqeq': ['error', 'always', {'null': 'ignore'}],
+      'grouped-accessor-pairs': ['warn', 'setBeforeGet'],
+      'max-classes-per-file': ['warn', 1],
+      'max-depth': ['warn', 4],
+      'no-alert': 'warn',
 
 
       // // @stylistic eslint rules
