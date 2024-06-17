@@ -132,8 +132,41 @@ export default [
       }],
       'no-empty': ['error', {
         allowEmptyCatch: true
-      }]
-
+      }],
+      'no-empty-function': ['warn', {
+        allow: ['constructors']
+      }],
+      'no-empty-static-block': 'error',
+      'no-eq-null': 'off',
+      'no-eval': 'error',
+      'no-extend-native': 'off',
+      'no-extra-bind': 'error',
+      'no-extra-boolean-cast': 'error',
+      'no-extra-label': 'error',
+      'no-implicit-coercion': ['error', {
+        boolean: true,
+        number: true,
+        string: true,
+        disallowTemplateShorthand: false
+      }],
+      'no-implicit-globals': 'warn',
+      'no-implied-eval': 'error',
+      'no-inline-comments': 'off',
+      'no-invalid-this': 'warn',
+      'no-iterator': 'error',
+      'no-label-var': 'warn',
+      'no-labels': 'warn',
+      'no-lone-blocks': 'off',
+      'no-lonely-if': 'error',
+      'no-loop-func': 'warn',
+      'no-magic-numbers': ['error', {
+        ignoreArrayIndexes: true,
+        ignoreDefaultValues: true
+      }],
+      'no-multi-assign': 'error',
+      'no-multi-str': 'warn',
+      'no-negated-condition': 'warn',
+      'no-nested-ternary': 'error',
 
       // // @stylistic eslint rules
       // // '@stylistic/array-bracket-spacing': ["error", "always", { "arrayInArrays": false}],
