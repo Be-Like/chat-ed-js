@@ -120,6 +120,19 @@ export default [
       'max-classes-per-file': ['warn', 1],
       'max-depth': ['warn', 4],
       'no-alert': 'warn',
+      'no-caller': 'error',
+      'no-case-declarations': 'error',
+      'no-console': ['error', { // NOTE: this should not be an error for node.js projects because you are frequently logging to the console
+        allow: ['warn', 'error']
+      }],
+      'no-delete-var': 'error',
+      'no-div-regex': 'error',
+      'no-else-return': ['warn', {
+        allowElseIf: false
+      }],
+      'no-empty': ['error', {
+        allowEmptyCatch: true
+      }]
 
 
       // // @stylistic eslint rules
