@@ -199,6 +199,23 @@ export default [
         allowInObjectDestructuring: true,
         allowFunctionParams: true
       }],
+      'no-unneeded-ternary': 'error',
+      'no-unused-expressions': 'warn',
+      'no-unused-labels': 'error',
+      'no-useless-call': 'error',
+      'no-useless-catch': 'error',
+      'no-useless-computed-key': 'warn',
+      'no-useless-concat': 'warn',
+      'no-useless-constructor': 'warn',
+      'no-useless-escape': 'error',
+      'no-useless-rename': 'warn',
+      'no-useless-return': 'warn',
+      'no-var': 'warn',
+      'no-void': 'off',
+      'no-warning-comments': ['warn', {
+        terms: ['todo', 'fixme', 'bug'],
+        location: 'start'
+      }],
 
       // // @stylistic eslint rules
       // // '@stylistic/array-bracket-spacing': ["error", "always", { "arrayInArrays": false}],
