@@ -12,7 +12,7 @@ const __dirname = dirname(__filename)
 const compat = new FlatCompat({ baseDirectory: __dirname })
 
 export default [
-  // js.configs.recommended, // TODO: reimplement this once done configuring all the rules - in case new rules become reommended with future updates
+  js.configs.recommended, // TODO: reimplement this once done configuring all the rules - in case new rules become reommended with future updates
   ...pluginVue.configs['flat/essential'],
   ...compat.extends('@vue/eslint-config-prettier/skip-formatting'),
   pluginCypress.configs.recommended,
@@ -216,6 +216,45 @@ export default [
         terms: ['todo', 'fixme', 'bug'],
         location: 'start'
       }],
+      'no-with': 'error',
+      'object-shorthand': 'warn',
+      'one-var': 'off',
+      'operator-assignment': 'off',
+      'prefer-arrow-callback': 'warn',
+      'prefer-const': ['warn', {
+        'destructuring': 'all',
+        'ignoreReadBeforeAssign': false
+      }],
+      'prefer-destructuring': ['warn', {
+        'object': true,
+        'array': false
+      }],
+      'prefer-exponentiation-operator': 'off',
+      'prefer-named-capture-group': 'off',
+      'prefer-numeric-literals': 'off',
+      'prefer-object-has-own': 'off',
+      'prefer-object-spread': 'off',
+      'prefer-regex-literals': 'off',
+      'prefer-rest-params': 'warn',
+      'prefer-spread': 'warn',
+      'prefer-template': 'warn',
+      'radix': 'off',
+      'require-await': 'warn',
+      'require-unicode-regexp': 'warn',
+      'require-yield': 'error',
+      'sort-imports': ['warn', {
+        'ignoreCase': false,
+        'ignoreDeclarationSort': false,
+        'ignoreMemberSort': false,
+        'memberSyntaxSortOrder': ['none', 'all', 'single', 'multiple'],
+        'allowSeparatedGroups': true
+      }],
+      'sort-keys': 'off',
+      'sort-vars': 'off',
+      'strict': 'off',
+      'symbol-description': 'warn',
+      'vars-on-top': 'warn',
+      'yoda': 'off',
 
       // // @stylistic eslint rules
       // // '@stylistic/array-bracket-spacing': ["error", "always", { "arrayInArrays": false}],
