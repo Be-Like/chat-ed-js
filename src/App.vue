@@ -1,14 +1,3 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
-
-const x = (y) => {
-  if (y === 5) return 'Hello 5'
-  else if (y === 6) return 'Hello 6'
-}
-x()
-</script>
-
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
@@ -25,6 +14,12 @@ x()
 
   <RouterView />
 </template>
+
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+
+import HelloWorld from './components/HelloWorld.vue'
+</script>
 
 <style scoped>
 header {

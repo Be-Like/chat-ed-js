@@ -1,8 +1,10 @@
 import { FlatCompat } from '@eslint/eslintrc'
 import js from '@eslint/js'
 import jsdoc from 'eslint-plugin-jsdoc'
-import pluginCypress from 'eslint-plugin-cypress/flat'
+
 import pluginVue from 'eslint-plugin-vue'
+
+import pluginCypress from 'eslint-plugin-cypress/flat'
 
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -645,7 +647,7 @@ export default [
       'vue/v-for-delimiter-style': ['warn', 'in'],
       'vue/v-if-else-key': 'off', // NOT needed in Vue 3
       'vue/v-on-handler-style': ['error', ['method', 'inline-function']],
-      
+      // TODO: come back to the Vue Extension Rules
       // END: Vue Specific eslint rules
 
       // // @stylistic eslint rules
