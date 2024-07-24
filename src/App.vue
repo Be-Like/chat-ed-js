@@ -22,6 +22,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 const x = [1, 2, 3]
 const y = [1, 2, 3, [1, 2, 3] ]
+const z = [1, 2, 3, 4]
 </script>
 
 <style scoped>
