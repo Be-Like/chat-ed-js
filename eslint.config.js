@@ -6,6 +6,8 @@ import pluginVue from 'eslint-plugin-vue'
 
 import pluginCypress from 'eslint-plugin-cypress/flat'
 
+import stylisticJs from '@stylistic/eslint-plugin-js'
+
 import { dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -75,7 +77,8 @@ export default [
       sourceType: 'module'
     },
     plugins: {
-      jsdoc
+      jsdoc,
+      '@stylistic/js': stylisticJs
     },
     rules: {
       // START: Standard ESLint Rules
@@ -650,13 +653,35 @@ export default [
       // TODO: come back to the Vue Extension Rules
       // END: Vue Specific eslint rules
 
-      // // @stylistic eslint rules
-      // // '@stylistic/array-bracket-spacing': ["error", "always", { "arrayInArrays": false}],
-      // '@stylistic/js/semi: ['error', {
-      //    omitLastInOneLineBlock: true,
-      //    omitLastInOneLineClassBody: true,
-      //  } // TODO: change .prettierrc.json to require semicolons
-      //
+      // START: @stylistic eslint rules
+      '@stylistic/js/array-bracket-newline': ['warn', {
+        'multiline': true,
+      }],
+      '@stylistic/js/array-bracket-spacing': ['warn', 'never', {
+        'arraysInArrays': true
+      }],
+      '@stylistic/js/array-element-newline': ['warn', { 'multiline': true }],
+      '@stylistic/js/arrow-parens': ['warn', 'always'],
+      '@stylistic/js/arrow-spacing': 'warn',
+      '@stylistic/js/block-spacing': ['warn', 'always'],
+      '@stylistic/js/brace-style': ['warn', '1tbs'],
+      '@stylistic/js/comma-dangle': ['warn', 'never'],
+      '@stylistic/js/comma-spacing': ['warn', {
+        'before': false, 'after': true
+      }],
+      '@stylistic/js/comma-style': ['warn', 'last'],
+      '@stylistic/js/computed-property-spacing': ['warn', 'never'],
+      '@stylistic/js/dot-location': ['warn', 'property'],
+      '@stylistic/js/eol-last': ['warn', 'always'],
+      '@stylistic/js/function-call-argument-newline': ['warn', 'consistent'],
+      '@stylistic/js/function-call-spacing': ['warn', 'never'],
+      '@stylistic/js/function-paren-newline': ['warn', 'multiline'],
+      
+      // END: @stylistic eslint rules
+      // TODO: change .prettierrc.json to require semicolons
+
+
+
       // // JSDoc rules
       // 'jsdoc/check-access': 1,
       // 'jsdoc/check-alignment': 1,
