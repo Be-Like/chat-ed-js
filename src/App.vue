@@ -21,7 +21,22 @@ import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 
 const x = [1, 2, 3]
-const y = [1, 2, 3, [1, 2, 3] ]
+
+// Is this ok?
+const y = [
+  1,
+  2,
+  3,
+  [1, 2, 3],
+  [1, 2, 3],
+  [1, 2, 3],
+  x,
+  x,
+  x,
+  'hello there world',
+  'this is a long mess',
+  'i cannot type'
+]
 const z = [1, 2, 3, 4]
 </script>
 

@@ -788,7 +788,7 @@ export default [
           'arraysInArrays': true
         }
       ],
-      '@stylistic/js/array-element-newline': ['warn', { 'multiline': true }],
+      '@stylistic/js/array-element-newline': ['warn', 'consistent'],
       '@stylistic/js/arrow-parens': ['warn', 'always'],
       '@stylistic/js/arrow-spacing': 'warn',
       '@stylistic/js/block-spacing': ['warn', 'always'],
@@ -823,6 +823,59 @@ export default [
           'flatTernaryExpressions': false,
           'offsetTernaryExpressions': false,
           'ignoreComments': false
+        }
+      ],
+      '@stylistic/js/jsx-quotes': 'off',
+      '@stylistic/js/key-spacing': [
+        'warn',
+        {
+          'beforeColon': false,
+          'afterColon': true,
+          'mode': 'strict'
+        }
+      ],
+      '@stylistic/js/keyword-spacing': [
+        'warn',
+        {
+          'before': true,
+          'after': true
+        }
+      ],
+      '@stylistic/js/line-comment-position': 'off',
+      '@stylistic/js/linebreak-style': ['error', 'unix'],
+      '@stylistic/js/lines-around-comment': [
+        'warn',
+        {
+          'beforeBlockComment': true,
+          'afterBlockComment': false,
+          'allowBlockStart': true,
+          'allowBlockEnd': true,
+          'allowObjectStart': true,
+          'allowObjectEnd': true,
+          'allowArrayStart': true,
+          'allowArrayEnd': true,
+          'allowClassStart': true,
+          'allowClassEnd': true,
+          'afterHashbangComment': true
+        }
+      ],
+      '@stylistic/js/lines-between-class-members': [
+        'warn',
+        {
+          'enforce': [{ blankLine: "always", prev: "*", next: "method" }, { blankLine: "always", prev: "method", next: "*" }]
+        }
+      ],
+      '@stylistic/js/max-len': [
+        'warn',
+        {
+          'code': 120,
+          'comments': 100,
+          'ignoreComments': false,
+          'ignoreTrailingComments': true,
+          'ignoreUrls': true,
+          'ignoreStrings': true,
+          'ignoreTemplateLiterals': true,
+          'ignoreRegExpLiterals': true
         }
       ]
       // END: @stylistic eslint rules
