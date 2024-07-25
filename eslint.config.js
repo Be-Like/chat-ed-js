@@ -877,7 +877,24 @@ export default [
           'ignoreTemplateLiterals': true,
           'ignoreRegExpLiterals': true
         }
-      ]
+      ],
+      '@stylistic/js/max-statements-per-line': ['warn', { 'max': 1 }],
+      '@stylistic/js/multiline-comment-style': ['warn', 'starred-block'],
+      '@stylistic/js/multiline-ternary': ['warn', 'always-multiline'],
+      '@stylistic/js/new-parens': ['error', 'always'],
+      '@stylistic/js/newline-per-chained-call': 'off', // Note: this would be far more useful if it had better configuration options
+      '@stylistic/js/no-confusing-arrow': 'warn',
+      '@stylistic/js/no-extra-parens': 'off',
+      '@stylistic/js/no-extra-semi': 'error',
+      '@stylistic/js/no-floating-decimal': 'error',
+      '@stylistic/js/no-mixed-operators': 'warn',
+      '@stylistic/js/no-mixed-spaces-and-tabs': ['warn', 'smart-tabs'],
+      '@stylistic/js/no-multi-spaces': 'off',
+      '@stylistic/js/no-multiple-empty-lines': ['warn', { 'max': 3 }],
+      '@stylistic/js/no-tabs': 'warn',
+      '@stylistic/js/no-trailing-spaces': 'warn',
+      '@stylistic/js/no-whitespace-before-property': 'warn',
+      '@stylistic/js/nonblock-statement-body-position': ['warn', 'beside']
       // END: @stylistic eslint rules
       // TODO: change .prettierrc.json to require semicolons
 
