@@ -894,7 +894,14 @@ export default [
       '@stylistic/js/no-tabs': 'warn',
       '@stylistic/js/no-trailing-spaces': 'warn',
       '@stylistic/js/no-whitespace-before-property': 'warn',
-      '@stylistic/js/nonblock-statement-body-position': ['warn', 'beside']
+      '@stylistic/js/nonblock-statement-body-position': ['warn', 'beside'],
+      '@stylistic/js/object-curly-newline': ['warn', { 'multiline': true }],
+      '@stylistic/js/object-curly-spacing': ['warn', 'always', { 'arraysInObjects': false, 'objectsInObjects': false }],
+      '@stylistic/js/object-property-newline': ['warn', { 'allowAllPropertiesOnSameLine': true }],
+      '@stylistic/js/one-var-declaration-per-line': ['warn', 'initializations'],
+      '@stylistic/js/operator-linebreak': ['warn', 'after'],
+      '@stylistic/js/padded-blocks': ['warn', 'never', { 'allowSingleLineBlocks': true }],
+
       // END: @stylistic eslint rules
       // TODO: change .prettierrc.json to require semicolons
 
