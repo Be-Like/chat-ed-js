@@ -901,7 +901,8 @@ export default [
       '@stylistic/js/one-var-declaration-per-line': ['warn', 'initializations'],
       '@stylistic/js/operator-linebreak': ['warn', 'after'],
       '@stylistic/js/padded-blocks': ['warn', 'never', { 'allowSingleLineBlocks': true }],
-
+      '@stylistic/js/padding-line-between-statements': 'off',
+      '@stylistic/js/quote-props': ['warn', 'consistent-as-needed']
       // END: @stylistic eslint rules
       // TODO: change .prettierrc.json to require semicolons
 
