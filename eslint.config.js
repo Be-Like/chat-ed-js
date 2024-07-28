@@ -1,23 +1,23 @@
-import { FlatCompat } from '@eslint/eslintrc'
-import js from '@eslint/js'
-import jsdoc from 'eslint-plugin-jsdoc'
+import { FlatCompat } from '@eslint/eslintrc';
+import js from '@eslint/js';
+import jsdoc from 'eslint-plugin-jsdoc';
 
-import pluginVue from 'eslint-plugin-vue'
+import pluginVue from 'eslint-plugin-vue';
 
-import pluginCypress from 'eslint-plugin-cypress/flat'
+import pluginCypress from 'eslint-plugin-cypress/flat';
 
-import stylisticJs from '@stylistic/eslint-plugin-js'
+import stylisticJs from '@stylistic/eslint-plugin-js';
 
-import { dirname } from 'node:path'
-import { fileURLToPath } from 'node:url'
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const fileURL = fileURLToPath(import.meta.url)
-const directory = dirname(fileURL)
-const compat = new FlatCompat({ baseDirectory: directory })
+const fileURL = fileURLToPath(import.meta.url);
+const directory = dirname(fileURL);
+const compat = new FlatCompat({ baseDirectory: directory });
 
-const INDENT_SPACING = 2
+const INDENT_SPACING = 2;
 
-const INLINE_ELEMENTS = ["a", "abbr", "audio", "b", "bdi", "bdo", "canvas", "cite", "code", "data", "del", "dfn", "em", "i", "iframe", "ins", "kbd", "label", "map", "mark", "noscript", "object", "output", "picture", "q", "ruby", "s", "samp", "small", "span", "strong", "sub", "sup", "svg", "time", "u", "var", "video"]
+const INLINE_ELEMENTS = ['a', 'abbr', 'audio', 'b', 'bdi', 'bdo', 'canvas', 'cite', 'code', 'data', 'del', 'dfn', 'em', 'i', 'iframe', 'ins', 'kbd', 'label', 'map', 'mark', 'noscript', 'object', 'output', 'picture', 'q', 'ruby', 's', 'samp', 'small', 'span', 'strong', 'sub', 'sup', 'svg', 'time', 'u', 'var', 'video'];
 
 export default [
   js.configs.recommended,
@@ -57,9 +57,7 @@ export default [
       'no-constant-binary-expression': 'error',
       'no-constant-condition': [
         'error',
-        {
-          checkLoops: 'allExceptWhileTrue'
-        }
+        { checkLoops: 'allExceptWhileTrue' }
       ],
       'no-constructor-return': 'off',
       'no-control-regex': 'error',
@@ -71,18 +69,14 @@ export default [
       'no-duplicate-case': 'error',
       'no-duplicate-imports': [
         'error',
-        {
-          includeExports: true
-        }
+        { includeExports: true }
       ],
       'no-empty-character-class': 'error',
       'no-empty-pattern': 'error',
       'no-ex-assign': 'error',
       'no-fallthrough': [
         'error',
-        {
-          allowEmptyCase: true
-        }
+        { allowEmptyCase: true }
       ],
       'no-func-assign': 'error',
       'no-import-assign': 'error',
@@ -112,9 +106,7 @@ export default [
       'no-unsafe-negation': 'error',
       'no-unsafe-optional-chaining': [
         'error',
-        {
-          disallowArithmeticOperators: true
-        }
+        { disallowArithmeticOperators: true }
       ],
       'no-unused-private-class-members': 'error',
       'no-unused-vars': 'error',
@@ -139,7 +131,7 @@ export default [
       ],
       'default-case-last': 'error',
       'default-param-last': 'error',
-      'eqeqeq': ['error', 'always', {'null': 'ignore'}],
+      'eqeqeq': ['error', 'always', { null: 'ignore' }],
       'grouped-accessor-pairs': ['warn', 'setBeforeGet'],
       'max-classes-per-file': ['warn', 1],
       'max-depth': ['warn', 4],
@@ -156,21 +148,15 @@ export default [
       'no-div-regex': 'error',
       'no-else-return': [
         'warn',
-        {
-          allowElseIf: false
-        }
+        { allowElseIf: false }
       ],
       'no-empty': [
         'error',
-        {
-          allowEmptyCatch: true
-        }
+        { allowEmptyCatch: true }
       ],
       'no-empty-function': [
         'warn',
-        {
-          allow: ['constructors']
-        }
+        { allow: ['constructors']}
       ],
       'no-empty-static-block': 'error',
       'no-eq-null': 'off',
@@ -272,15 +258,15 @@ export default [
       'prefer-const': [
         'warn',
         {
-          'destructuring': 'all',
-          'ignoreReadBeforeAssign': false
+          destructuring: 'all',
+          ignoreReadBeforeAssign: false
         }
       ],
       'prefer-destructuring': [
         'warn',
         {
-          'object': true,
-          'array': false
+          object: true,
+          array: false
         }
       ],
       'prefer-exponentiation-operator': 'off',
@@ -299,11 +285,11 @@ export default [
       'sort-imports': [
         'warn',
         {
-          'ignoreCase': false,
-          'ignoreDeclarationSort': false,
-          'ignoreMemberSort': false,
-          'memberSyntaxSortOrder': ['none', 'all', 'single', 'multiple'],
-          'allowSeparatedGroups': true
+          ignoreCase: false,
+          ignoreDeclarationSort: false,
+          ignoreMemberSort: false,
+          memberSyntaxSortOrder: ['none', 'all', 'single', 'multiple'],
+          allowSeparatedGroups: true
         }
       ],
       'sort-keys': 'off',
@@ -315,17 +301,13 @@ export default [
       // END: Standard eslint rules
 
       // START: Vue Specific eslint rules
-      "vue/comment-directive": [
-        "error",
-        {
-          "reportUnusedDisableDirectives": false
-        }
+      'vue/comment-directive': [
+        'error',
+        { reportUnusedDisableDirectives: false }
       ],
-      "vue/multi-word-component-names": [
-        "warn",
-        {
-          "ignores": []
-        }
+      'vue/multi-word-component-names': [
+        'warn',
+        { ignores: []}
       ],
       'vue/no-arrow-functions-in-watch': 'error',
       'vue/no-async-in-computed-properties': 'error',
@@ -358,97 +340,87 @@ export default [
       'vue/no-multiple-template-root': 'off',
       'vue/no-mutating-props': [
         'error',
-        {
-          'shallowOnly': false
-        }
+        { shallowOnly: false }
       ],
-      "vue/no-parsing-error": [
-        "error",
+      'vue/no-parsing-error': [
+        'error',
         {
-          "abrupt-closing-of-empty-comment": true,
-          "absence-of-digits-in-numeric-character-reference": true,
-          "cdata-in-html-content": true,
-          "character-reference-outside-unicode-range": true,
-          "control-character-in-input-stream": true,
-          "control-character-reference": true,
-          "eof-before-tag-name": true,
-          "eof-in-cdata": true,
-          "eof-in-comment": true,
-          "eof-in-tag": true,
-          "incorrectly-closed-comment": true,
-          "incorrectly-opened-comment": true,
-          "invalid-first-character-of-tag-name": true,
-          "missing-attribute-value": true,
-          "missing-end-tag-name": true,
-          "missing-semicolon-after-character-reference": true,
-          "missing-whitespace-between-attributes": true,
-          "nested-comment": true,
-          "noncharacter-character-reference": true,
-          "noncharacter-in-input-stream": true,
-          "null-character-reference": true,
-          "surrogate-character-reference": true,
-          "surrogate-in-input-stream": true,
-          "unexpected-character-in-attribute-name": true,
-          "unexpected-character-in-unquoted-attribute-value": true,
-          "unexpected-equals-sign-before-attribute-name": true,
-          "unexpected-null-character": true,
-          "unexpected-question-mark-instead-of-tag-name": true,
-          "unexpected-solidus-in-tag": true,
-          "unknown-named-character-reference": true,
-          "end-tag-with-attributes": true,
-          "duplicate-attribute": true,
-          "end-tag-with-trailing-solidus": true,
-          "non-void-html-element-start-tag-with-trailing-solidus": false,
-          "x-invalid-end-tag": true,
-          "x-invalid-namespace": true
+          'abrupt-closing-of-empty-comment': true,
+          'absence-of-digits-in-numeric-character-reference': true,
+          'cdata-in-html-content': true,
+          'character-reference-outside-unicode-range': true,
+          'control-character-in-input-stream': true,
+          'control-character-reference': true,
+          'eof-before-tag-name': true,
+          'eof-in-cdata': true,
+          'eof-in-comment': true,
+          'eof-in-tag': true,
+          'incorrectly-closed-comment': true,
+          'incorrectly-opened-comment': true,
+          'invalid-first-character-of-tag-name': true,
+          'missing-attribute-value': true,
+          'missing-end-tag-name': true,
+          'missing-semicolon-after-character-reference': true,
+          'missing-whitespace-between-attributes': true,
+          'nested-comment': true,
+          'noncharacter-character-reference': true,
+          'noncharacter-in-input-stream': true,
+          'null-character-reference': true,
+          'surrogate-character-reference': true,
+          'surrogate-in-input-stream': true,
+          'unexpected-character-in-attribute-name': true,
+          'unexpected-character-in-unquoted-attribute-value': true,
+          'unexpected-equals-sign-before-attribute-name': true,
+          'unexpected-null-character': true,
+          'unexpected-question-mark-instead-of-tag-name': true,
+          'unexpected-solidus-in-tag': true,
+          'unknown-named-character-reference': true,
+          'end-tag-with-attributes': true,
+          'duplicate-attribute': true,
+          'end-tag-with-trailing-solidus': true,
+          'non-void-html-element-start-tag-with-trailing-solidus': false,
+          'x-invalid-end-tag': true,
+          'x-invalid-namespace': true
         }
       ],
       'vue/no-ref-as-operand': 'error',
-      "vue/no-reserved-component-names": [
-        "error",
+      'vue/no-reserved-component-names': [
+        'error',
         {
-          "disallowVueBuiltInComponents": true,
-          "disallowVue3BuiltInComponents": true
+          disallowVueBuiltInComponents: true,
+          disallowVue3BuiltInComponents: true
         }
       ],
-      "vue/no-reserved-keys": [
-        "error",
+      'vue/no-reserved-keys': [
+        'error',
         {
-          "reserved": [],
-          "groups": []
+          reserved: [],
+          groups: []
         }
       ],
-      "vue/no-reserved-props": [
-        "error",
-        {
-          "vueVersion": 3
-        }
+      'vue/no-reserved-props': [
+        'error',
+        { vueVersion: 3 }
       ],
       'vue/no-shared-component-data': 'error',
       'vue/no-template-key': 'error',
       'vue/no-textarea-mustache': 'error',
-      "vue/no-unused-components": [
-        "error",
-        {
-          "ignoreWhenBindingPresent": true
-        }
+      'vue/no-unused-components': [
+        'error',
+        { ignoreWhenBindingPresent: true }
       ],
-      "vue/no-unused-vars": 'error',
+      'vue/no-unused-vars': 'error',
       'vue/no-use-computed-property-like-method': 'error',
-      "vue/no-use-v-if-with-v-for": [
-        "error",
-        {
-          "allowUsingIterationVar": true
-        }
+      'vue/no-use-v-if-with-v-for': [
+        'error',
+        { allowUsingIterationVar: true }
       ],
       'vue/no-useless-template-attributes': 'error',
       'vue/no-v-for-template-key-on-child': 'error',
       'vue/no-v-for-template-key': 'off',
       'vue/no-v-text-v-html-on-component': [
         'error',
-        {
-          'allow': []
-        }
+        { allow: []}
       ],
       'vue/no-watch-after-await': 'error',
       'vue/prefer-import-from-vue': 'warn',
@@ -488,27 +460,27 @@ export default [
       'vue/first-attribute-linebreak': [
         'warn',
         {
-          'singleline': 'beside',
-          'multiline': 'below'
+          singleline: 'beside',
+          multiline: 'below'
         }
       ],
       'vue/html-closing-bracket-newline': [
         'warn',
         {
-          'singleline': 'never',
-          'multiline': 'always',
-          'selfClosingTag': {
-            'singleline': 'never',
-            'multiline': 'always'
+          singleline: 'never',
+          multiline: 'always',
+          selfClosingTag: {
+            singleline: 'never',
+            multiline: 'always'
           }
         }
       ],
       'vue/html-closing-bracket-spacing': [
         'warn',
         {
-          'startTag': 'never',
-          'endTag': 'never',
-          'selfClosingTag': 'always'
+          startTag: 'never',
+          endTag: 'never',
+          selfClosingTag: 'always'
         }
       ],
       'vue/html-end-tags': 'error',
@@ -516,47 +488,45 @@ export default [
         'warn',
         INDENT_SPACING,
         {
-          'attribute': 1,
-          'baseIndent': 1,
-          'closeBracket': 0,
-          'alignAttributesVertically': true,
-          'ignores': []
+          attribute: 1,
+          baseIndent: 1,
+          closeBracket: 0,
+          alignAttributesVertically: true,
+          ignores: []
         }
       ],
       'vue/html-quotes': ['error', 'double'],
       'vue/html-self-closing': [
         'warn',
         {
-          'html': {
-            'void': 'always',
-            'normal': 'always',
-            'component': 'always'
+          html: {
+            void: 'always',
+            normal: 'always',
+            component: 'always'
           },
-          'svg': 'always',
-          'math': 'always'
+          svg: 'always',
+          math: 'always'
         }
       ],
       'vue/max-attributes-per-line': [
         'warn',
         {
-          'singleline': 5,
-          'multiline': 1
+          singleline: 5,
+          multiline: 1
         }
       ],
       'vue/multiline-html-element-content-newline': [
         'warn',
         {
-          'ignoreWhenEmpty': true,
-          'ignores': ['pre', 'textarea', ...INLINE_ELEMENTS],
-          'allowEmptyLines': true
+          ignoreWhenEmpty: true,
+          ignores: ['pre', 'textarea', ...INLINE_ELEMENTS],
+          allowEmptyLines: true
         }
       ],
       'vue/mustache-interpolation-spacing': ['warn', 'always'],
       'vue/no-multi-spaces': [
         'warn',
-        {
-          'ignoreProperties': true
-        }
+        { ignoreProperties: true }
       ],
       'vue/no-spaces-around-equal-signs-in-attribute': 'error',
       'vue/no-template-shadow': 'error',
@@ -569,33 +539,29 @@ export default [
       'vue/v-bind-style': [
         'warn',
         'shorthand',
-        {
-          'sameNameShorthand': 'never'
-        }
+        { sameNameShorthand: 'never' }
       ],
       'vue/v-on-event-hyphenation': [
         'warn',
         'always',
         {
-          'autofix': true,
-          'ignore': []
+          autofix: true,
+          ignore: []
         }
       ],
       'vue/v-on-style': ['warn', 'shorthand'],
       'vue/v-slot-style': [
         'warn',
         {
-          'atComponent': 'v-slot',
-          'default': 'shorthand',
-          'named': 'shorthand'
+          atComponent: 'v-slot',
+          default: 'shorthand',
+          named: 'shorthand'
         }
       ],
       'vue/attributes-order': 'off',
       'vue/no-lone-template': [
         'error',
-        {
-          'ignoreAccessible': false
-        }
+        { ignoreAccessible: false }
       ],
       'vue/no-multiple-slot-args': 'error',
       'vue/no-v-html': 'off',
@@ -605,7 +571,7 @@ export default [
       'vue/block-order': [
         'warn',
         {
-          'order': [ // TODO: configure WebStorm to prebuild vue files in this format
+          order: [ // TODO: configure WebStorm to prebuild vue files in this format
             'template', 'script:not([setup])', 'script[setup]', 'style:not([scoped])', 'style[scoped]'
           ]
         }
@@ -613,9 +579,9 @@ export default [
       'vue/block-tag-newline': [
         'warn',
         {
-          'singleline': 'consistent',
-          'multiline': 'always',
-          'maxEmptyLines': 2
+          singleline: 'consistent',
+          multiline: 'always',
+          maxEmptyLines: 2
         }
       ],
       'vue/component-api-style': ['warn', ['script-setup', 'composition'] ],
@@ -623,8 +589,8 @@ export default [
         'warn',
         'PascalCase',
         {
-          'registeredComponentsOnly': false,
-          'ignores': []
+          registeredComponentsOnly: false,
+          ignores: []
         }
       ],
       'vue/component-options-name-casing': ['warn', 'PascalCase'],
@@ -632,39 +598,37 @@ export default [
       'vue/define-macros-order': [
         'warn',
         {
-          'order': ['defineModel', 'defineProps', 'defineEmits', 'defineOptions'],
-          'defineExposeLast': true
+          order: ['defineModel', 'defineProps', 'defineEmits', 'defineOptions'],
+          defineExposeLast: true
         }
       ],
       'vue/define-props-declaration': ['warn', 'type-based'],
       'vue/html-button-has-type': [
         'warn',
         {
-          'button': true,
-          'reset': true,
-          'submit': true
+          button: true,
+          reset: true,
+          submit: true
         }
       ],
       'vue/html-comment-content-newline': [
         'warn',
         {
-          'singleline': 'never',
-          'multiline': 'always'
+          singleline: 'never',
+          multiline: 'always'
         }
       ],
       'vue/html-comment-indent': ['warn', 2],
       'vue/match-component-file-name': [
         'warn',
         {
-          'extensions': ['js'],
-          'shouldMatchCase': true
+          extensions: ['js'],
+          shouldMatchCase: true
         }
       ],
       'vue/new-line-between-multi-line-property': [
         'warn',
-        {
-          'minLineOfMultilineProperty': 2
-        }
+        { minLineOfMultilineProperty: 2 }
       ],
       'vue/no-bare-strings-in-template': 'off',
       'vue/no-boolean-default': 'off',
@@ -676,9 +640,7 @@ export default [
       'vue/no-ref-object-reactivity-loss': 'error',
       'vue/no-required-prop-with-default': [
         'warn',
-        {
-          'autofix': false
-        }
+        { autofix: false }
       ],
       'vue/no-restricted-block': 'off',
       'vue/no-restricted-call-after-await': 'off',
@@ -695,9 +657,7 @@ export default [
       'vue/no-setup-props-reactivity-loss': 'error',
       'vue/no-static-inline-styles': [
         'warn',
-        {
-          'allowBinding': false
-        }
+        { allowBinding: false }
       ],
       'vue/no-template-target-blank': 'off',
       'vue/no-this-in-before-route-enter': 'warn',
@@ -705,9 +665,7 @@ export default [
       'vue/no-unused-emit-declarations': 'warn',
       'vue/no-unused-properties': [
         'warn',
-        {
-          'groups': ['props']
-        }
+        { groups: ['props']}
       ],
       'vue/no-unused-refs': 'warn',
       'vue/no-use-v-else-with-v-for': 'off',
@@ -719,16 +677,16 @@ export default [
       'vue/padding-lines-in-component-definition': [
         'warn',
         {
-          'betweenOptions': 'always',
-          'withinOption': {
-            'emits': 'always',
-            'props': 'always',
-            'data': 'always',
-            'methods': 'always',
-            'computed': 'always',
-            'watch': 'always'
+          betweenOptions: 'always',
+          withinOption: {
+            emits: 'always',
+            props: 'always',
+            data: 'always',
+            methods: 'always',
+            computed: 'always',
+            watch: 'always'
           },
-          'groupSingleLineProperties': true
+          groupSingleLineProperties: true
         }
       ],
       'vue/prefer-define-options': 'off',
@@ -742,19 +700,17 @@ export default [
       'vue/require-macro-variable-name': [
         'warn',
         {
-          'defineProps': 'props',
-          'defineEmits': 'emit',
-          'defineSlots': 'slots',
-          'useSlots': 'slots',
-          'useAttrs': 'attrs'
+          defineProps: 'props',
+          defineEmits: 'emit',
+          defineSlots: 'slots',
+          useSlots: 'slots',
+          useAttrs: 'attrs'
         }
       ],
       'vue/require-name-property': 'off', // NOTE: use in component library
       'vue/require-prop-comment': [
         'warn',
-        {
-          'type': 'JSDoc'
-        }
+        { type: 'JSDoc' }
       ],
       'vue/require-typed-object-prop': 'off',
       'vue/require-typed-ref': 'off',
@@ -762,8 +718,8 @@ export default [
         'warn',
         INDENT_SPACING,
         {
-          'baseIndent': 0,
-          'switchCase': 0
+          baseIndent: 0,
+          switchCase: 0
         }
       ],
       'vue/sort-keys': 'off',
@@ -771,22 +727,21 @@ export default [
       'vue/v-for-delimiter-style': ['warn', 'in'],
       'vue/v-if-else-key': 'off', // NOT needed in Vue 3
       'vue/v-on-handler-style': ['error', ['method', 'inline-function'] ],
-      // TODO: come back to the Vue Extension Rules
-      // END: Vue Specific eslint rules
+
+      /*
+       * TODO: come back to the Vue Extension Rules
+       * END: Vue Specific eslint rules
+       */
 
       // START: @stylistic eslint rules
       '@stylistic/js/array-bracket-newline': [
         'warn',
-        {
-          'multiline': true
-        }
+        { multiline: true }
       ],
       '@stylistic/js/array-bracket-spacing': [
         'warn',
         'never',
-        {
-          'arraysInArrays': true
-        }
+        { arraysInArrays: true }
       ],
       '@stylistic/js/array-element-newline': ['warn', 'consistent'],
       '@stylistic/js/arrow-parens': ['warn', 'always'],
@@ -796,9 +751,7 @@ export default [
       '@stylistic/js/comma-dangle': ['warn', 'never'],
       '@stylistic/js/comma-spacing': [
         'warn',
-        {
-          'before': false, 'after': true
-        }
+        { before: false, after: true }
       ],
       '@stylistic/js/comma-style': ['warn', 'last'],
       '@stylistic/js/computed-property-spacing': ['warn', 'never'],
@@ -807,38 +760,38 @@ export default [
       '@stylistic/js/function-call-argument-newline': ['warn', 'consistent'],
       '@stylistic/js/function-call-spacing': ['warn', 'never'],
       '@stylistic/js/function-paren-newline': ['warn', 'multiline'],
-      '@stylistic/js/generator-star-spacing': ['warn', { 'before': false, 'after': true }],
+      '@stylistic/js/generator-star-spacing': ['warn', { before: false, after: true }],
       '@stylistic/js/implicit-arrow-linebreak': ['warn', 'beside'],
       '@stylistic/js/indent': [
         'warn',
         INDENT_SPACING,
         {
-          'SwitchCase': 1,
-          'VariableDeclarator': 'first',
-          'FunctionDeclaration': { 'parameters': 'first' },
-          'CallExpression': { 'arguments': 'first' },
-          'ArrayExpression': 'first',
-          'ObjectExpression': 'first',
-          'ImportDeclaration': 'first',
-          'flatTernaryExpressions': false,
-          'offsetTernaryExpressions': false,
-          'ignoreComments': false
+          SwitchCase: 1,
+          VariableDeclarator: 'first',
+          FunctionDeclaration: { parameters: 'first' },
+          CallExpression: { arguments: 'first' },
+          ArrayExpression: 'first',
+          ObjectExpression: 'first',
+          ImportDeclaration: 'first',
+          flatTernaryExpressions: false,
+          offsetTernaryExpressions: false,
+          ignoreComments: false
         }
       ],
       '@stylistic/js/jsx-quotes': 'off',
       '@stylistic/js/key-spacing': [
         'warn',
         {
-          'beforeColon': false,
-          'afterColon': true,
-          'mode': 'strict'
+          beforeColon: false,
+          afterColon: true,
+          mode: 'strict'
         }
       ],
       '@stylistic/js/keyword-spacing': [
         'warn',
         {
-          'before': true,
-          'after': true
+          before: true,
+          after: true
         }
       ],
       '@stylistic/js/line-comment-position': 'off',
@@ -846,39 +799,37 @@ export default [
       '@stylistic/js/lines-around-comment': [
         'warn',
         {
-          'beforeBlockComment': true,
-          'afterBlockComment': false,
-          'allowBlockStart': true,
-          'allowBlockEnd': true,
-          'allowObjectStart': true,
-          'allowObjectEnd': true,
-          'allowArrayStart': true,
-          'allowArrayEnd': true,
-          'allowClassStart': true,
-          'allowClassEnd': true,
-          'afterHashbangComment': true
+          beforeBlockComment: true,
+          afterBlockComment: false,
+          allowBlockStart: true,
+          allowBlockEnd: true,
+          allowObjectStart: true,
+          allowObjectEnd: true,
+          allowArrayStart: true,
+          allowArrayEnd: true,
+          allowClassStart: true,
+          allowClassEnd: true,
+          afterHashbangComment: true
         }
       ],
       '@stylistic/js/lines-between-class-members': [
         'warn',
-        {
-          'enforce': [{ blankLine: "always", prev: "*", next: "method" }, { blankLine: "always", prev: "method", next: "*" }]
-        }
+        { enforce: [{ blankLine: 'always', prev: '*', next: 'method' }, { blankLine: 'always', prev: 'method', next: '*' }]}
       ],
       '@stylistic/js/max-len': [
         'warn',
         {
-          'code': 120,
-          'comments': 100,
-          'ignoreComments': false,
-          'ignoreTrailingComments': true,
-          'ignoreUrls': true,
-          'ignoreStrings': true,
-          'ignoreTemplateLiterals': true,
-          'ignoreRegExpLiterals': true
+          code: 120,
+          comments: 100,
+          ignoreComments: false,
+          ignoreTrailingComments: true,
+          ignoreUrls: true,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true,
+          ignoreRegExpLiterals: true
         }
       ],
-      '@stylistic/js/max-statements-per-line': ['warn', { 'max': 1 }],
+      '@stylistic/js/max-statements-per-line': ['warn', { max: 1 }],
       '@stylistic/js/multiline-comment-style': ['warn', 'starred-block'],
       '@stylistic/js/multiline-ternary': ['warn', 'always-multiline'],
       '@stylistic/js/new-parens': ['error', 'always'],
@@ -890,21 +841,47 @@ export default [
       '@stylistic/js/no-mixed-operators': 'warn',
       '@stylistic/js/no-mixed-spaces-and-tabs': ['warn', 'smart-tabs'],
       '@stylistic/js/no-multi-spaces': 'off',
-      '@stylistic/js/no-multiple-empty-lines': ['warn', { 'max': 3 }],
+      '@stylistic/js/no-multiple-empty-lines': ['warn', { max: 3 }],
       '@stylistic/js/no-tabs': 'warn',
       '@stylistic/js/no-trailing-spaces': 'warn',
       '@stylistic/js/no-whitespace-before-property': 'warn',
       '@stylistic/js/nonblock-statement-body-position': ['warn', 'beside'],
-      '@stylistic/js/object-curly-newline': ['warn', { 'multiline': true }],
-      '@stylistic/js/object-curly-spacing': ['warn', 'always', { 'arraysInObjects': false, 'objectsInObjects': false }],
-      '@stylistic/js/object-property-newline': ['warn', { 'allowAllPropertiesOnSameLine': true }],
+      '@stylistic/js/object-curly-newline': ['warn', { multiline: true }],
+      '@stylistic/js/object-curly-spacing': ['warn', 'always', { arraysInObjects: false, objectsInObjects: false }],
+      '@stylistic/js/object-property-newline': ['warn', { allowAllPropertiesOnSameLine: true }],
       '@stylistic/js/one-var-declaration-per-line': ['warn', 'initializations'],
       '@stylistic/js/operator-linebreak': ['warn', 'after'],
-      '@stylistic/js/padded-blocks': ['warn', 'never', { 'allowSingleLineBlocks': true }],
+      '@stylistic/js/padded-blocks': ['warn', 'never', { allowSingleLineBlocks: true }],
       '@stylistic/js/padding-line-between-statements': 'off',
-      '@stylistic/js/quote-props': ['warn', 'consistent-as-needed']
-      // END: @stylistic eslint rules
-      // TODO: change .prettierrc.json to require semicolons
+      '@stylistic/js/quote-props': ['warn', 'consistent-as-needed'],
+      '@stylistic/js/quotes': ['warn', 'single'],
+      '@stylistic/js/rest-spread-spacing': ['error', 'never'],
+      '@stylistic/js/semi': ['warn', 'always', { omitLastInOneLineBlock: true, omitLastInOneLineClassBody: true }],
+      '@stylistic/js/semi-spacing': ['warn', { before: false, after: true }],
+      '@stylistic/js/semi-style': ['warn', 'last'],
+      '@stylistic/js/space-before-blocks': ['warn', 'always'],
+      '@stylistic/js/space-before-function-paren': [
+        'warn',
+        { anonymous: 'always', named: 'never', asyncArrow: 'always' }
+      ],
+      '@stylistic/js/space-in-parens': ['warn', 'never'],
+      '@stylistic/js/space-infix-ops': 'warn',
+      '@stylistic/js/space-unary-ops': 'warn',
+      '@stylistic/js/spaced-comment': [
+        'warn',
+        'always',
+        { exceptions: ['-', '+', '*']}
+      ],
+      '@stylistic/js/switch-colon-spacing': ['warn', { after: true, before: false }],
+      '@stylistic/js/template-curly-spacing': ['warn', 'never'],
+      '@stylistic/js/template-tag-spacing': ['warn', 'never'],
+      '@stylistic/js/wrap-iife': 'warn',
+      '@stylistic/js/yield-star-spacing': ['warn', { after: true, before: false }]
+
+      /*
+       * END: @stylistic eslint rules
+       * TODO: change .prettierrc.json to require semicolons
+       */
 
 
 
@@ -1003,4 +980,4 @@ export default [
       // 'jsdoc/valid-types': 1
     }
   }
-]
+];
