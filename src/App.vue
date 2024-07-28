@@ -16,11 +16,11 @@
 </template>
 
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router';
 
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue';
 
-const x = [1, 2, 3]
+const x = [1, 2, 3];
 
 // Is this ok?
 const y = [
@@ -36,8 +36,8 @@ const y = [
   'hello there world',
   'this is a long mess',
   'i cannot type'
-]
-const z = [1, 2, 3, 4]
+];
+const z = [1, 2, 3, 4];
 </script>
 
 <style scoped>
