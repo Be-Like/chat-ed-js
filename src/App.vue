@@ -23,15 +23,16 @@ import HelloWorld from './components/HelloWorld.vue';
 const x = [1, 2, 3];
 
 /**
- * @access public
+ * This is a test description.
+ *
  * @author Jake Simpson
  * @private
- * @param {string[]} a
- * @returns {string}
+ * @param   {string[]} a This is a description for param `a`.
+ * @returns {void}       This is a description for the return value.
  */
 const test = (a) => {
-  return 'hello'
-}
+  a + 2
+};
 
 // Is this ok?
 const y = [

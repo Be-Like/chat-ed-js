@@ -919,72 +919,114 @@ export default [
       'jsdoc/check-tag-names': 'error',
       'jsdoc/check-types': 'error',
       'jsdoc/check-values': [
-        'error',
-        {
-          // allowedAuthors: [] // Enable and enter permitted authors if desired
-          // licensePattern: '' // Enable and enter license pattern if desired
-        }
+        'error'
+        // {
+        /*
+         * allowedAuthors: [] // Enable and enter permitted authors if desired
+         * licensePattern: '' // Enable and enter license pattern if desired
+         */
+        // }
       ],
       // 'jsdoc/convert-to-jsdoc-comments': 'off', // Currently experimental as of v48.8.3
-      // 'jsdoc/empty-tags': 1,
-      // 'jsdoc/implements-on-classes': 1,
-      // 'jsdoc/match-description': 1,
-      // 'jsdoc/no-bad-blocks': 1,
-      // 'jsdoc/no-defaults': 1,
-      // 'jsdoc/no-types': 0,
-      // 'jsdoc/no-undefined-types': 1,
-      // 'jsdoc/require-description': 1,
-      // 'jsdoc/require-description-complete-sentence': 0,
-      // 'jsdoc/require-example': 0,
-      // 'jsdoc/require-file-overview': 1,
-      // 'jsdoc/require-hyphen-before-param-description': 0,
-      // 'jsdoc/require-jsdoc': [
-      //   1,
-      //   {
-      //     publicOnly: {
-      //       ancestorsOnly: false,
-      //       cjs: true,
-      //       esm: true,
-      //       window: true
-      //     },
-      //     require: {
-      //       ArrowFunctionExpression: true,
-      //       ClassDeclaration: true,
-      //       ClassExpression: true,
-      //       FunctionDeclaration: true,
-      //       FunctionExpression: true,
-      //       MethodDefinition: true
-      //     }
-      //   }
-      // ],
-      // 'jsdoc/require-param': 1,
-      // 'jsdoc/require-param-description': 1,
-      // 'jsdoc/require-param-name': 1,
-      // 'jsdoc/require-param-type': 1,
-      // 'jsdoc/require-property': 1,
-      // 'jsdoc/require-property-description': 1,
-      // 'jsdoc/require-property-name': 1,
-      // 'jsdoc/require-property-type': 1,
-      // 'jsdoc/require-returns': 1,
-      // 'jsdoc/require-returns-check': 1,
-      // 'jsdoc/require-returns-description': 1,
-      // 'jsdoc/require-returns-type': 1,
-      // 'jsdoc/tag-lines': [
-      //   1,
-      //   'always',
-      //   {
-      //     count: 0,
-      //     startLines: 1,
-      //     applyToEndTag: false,
-      //     tags: {
-      //       example: {
-      //         count: 1,
-      //         lines: 'always'
-      //       }
-      //     }
-      //   }
-      // ],
-      // 'jsdoc/valid-types': 1
+      'jsdoc/empty-tags': 'error',
+      'jsdoc/implements-on-classes': 'error',
+      // 'jsdoc/imports-as-dependencies': 'off', // Disabled
+      'jsdoc/informative-docs': 'warn',
+      'jsdoc/match-description': 'error',
+      // 'jsdoc/match-name': 'off', // Disabled
+
+      // 'jsdoc/multiline-blocks': 'off', // Disabled
+      'jsdoc/no-bad-blocks': 'error',
+      'jsdoc/no-blank-block-descriptions': 'warn',
+      'jsdoc/no-blank-blocks': 'warn',
+      'jsdoc/no-defaults': 'error',
+      // 'jsdoc/no-missing-syntax': 'off', // Disabled
+      'jsdoc/no-multi-asterisks': [
+        'warn',
+        {
+          allowWhitespace: false,
+          preventAtMiddleLines: true,
+          preventAtEnd: true
+        }
+      ],
+      // 'jsdoc/no-restricted-syntax': 'off', // Disabled
+      'jsdoc/no-types': 'off', // Disabled - generally used with TypeScript
+      'jsdoc/no-undefined-types': 'error',
+      'jsdoc/require-asterisk-prefix': ['warn', 'always'],
+      'jsdoc/require-description-complete-sentence': 'warn',
+      'jsdoc/require-description': 'warn',
+      'jsdoc/require-example': 'off',
+      'jsdoc/require-file-overview': 'warn',
+      'jsdoc/require-hyphen-before-param-description': 'off',
+      'jsdoc/require-jsdoc': [
+        'warn',
+        {
+          publicOnly: {
+            ancestorsOnly: false,
+            cjs: true,
+            esm: true,
+            window: true
+          },
+          require: {
+            ArrowFunctionExpression: true,
+            ClassDeclaration: true,
+            ClassExpression: true,
+            FunctionDeclaration: true,
+            FunctionExpression: true,
+            MethodDefinition: true
+          },
+          exemptEmptyConstructors: true,
+          exemptEmptyFunctions: false,
+          checkConstructors: true,
+          checkGetters: false,
+          checkSetters: false,
+          enableFixer: true,
+          fixerMessage: ' TODO: Add JSDOC (AUTO-GENERATED COMMENT)'
+        }
+      ],
+      'jsdoc/require-param': 'error',
+      'jsdoc/require-param-type': 'error',
+      'jsdoc/require-param-name': 'error',
+      'jsdoc/require-param-description': 'warn',
+      'jsdoc/require-property': 'error',
+      'jsdoc/require-property-name': 'error',
+      'jsdoc/require-property-type': 'error',
+      'jsdoc/require-property-description': 'warn',
+
+      'jsdoc/require-returns': [
+        'error',
+        {
+          checkConstructors: false,
+          checkGetters: true,
+          forceRequireReturn: false,
+          forceReturnsWithAsync: false
+        }
+      ],
+      'jsdoc/require-returns-check': 'error',
+      'jsdoc/require-returns-type': 'error',
+      'jsdoc/require-returns-description': 'warn',
+      // 'jsdoc/require-template': 'off', // Disabled - generally used with TypeScript
+      'jsdoc/require-throws': 'error',
+      'jsdoc/require-yields': 'error',
+      'jsdoc/require-yields-check': 'error',
+      // 'jsdoc/sort-tags': ['warn', {}] // Experimental - set once a standard begins is determined
+      'jsdoc/tag-lines': [
+        'warn',
+        'always',
+        {
+          count: 0,
+          startLines: 1,
+          applyToEndTag: false,
+          tags: {
+            example: {
+              count: 1,
+              lines: 'always'
+            }
+          }
+        }
+      ],
+      'jsdoc/text-escaping': 'off',
+      'jsdoc/valid-types': 'error'
       // END: JSDoc eslint rules
     }
   }
