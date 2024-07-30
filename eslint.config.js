@@ -876,7 +876,7 @@ export default [
       '@stylistic/js/template-curly-spacing': ['warn', 'never'],
       '@stylistic/js/template-tag-spacing': ['warn', 'never'],
       '@stylistic/js/wrap-iife': 'warn',
-      '@stylistic/js/yield-star-spacing': ['warn', { after: true, before: false }]
+      '@stylistic/js/yield-star-spacing': ['warn', { after: true, before: false }],
 
       /*
        * END: @stylistic eslint rules
@@ -885,40 +885,47 @@ export default [
 
 
 
-      // // JSDoc rules
-      // 'jsdoc/check-access': 1,
-      // 'jsdoc/check-alignment': 1,
-      // // Turn on after https://github.com/eslint/eslint/issues/14745 resolved
-      // 'jsdoc/check-examples': 0,
-      // 'jsdoc/check-indentation': 0,
-      // 'jsdoc/check-line-alignment': [
-      //   1,
-      //   'always',
-      //   {
-      //     'tags': [
-      //       'arg',
-      //       'argument',
-      //       'callback',
-      //       'param',
-      //       'property',
-      //       'prop',
-      //       'returns',
-      //       'return'
-      //     ],
-      //     'customSpacings': {
-      //       'postDelimiter': 1,
-      //       'postTag': 1,
-      //       'postType': 1,
-      //       'postName': 2
-      //     }
-      //   }
-      // ],
-      // 'jsdoc/check-param-names': 1,
-      // 'jsdoc/check-property-names': 1,
-      // 'jsdoc/check-syntax': 1,
-      // 'jsdoc/check-tag-names': 1,
-      // 'jsdoc/check-types': 1,
-      // 'jsdoc/check-values': 1,
+      // START: JSDoc eslint rules
+      'jsdoc/check-access': 'error',
+      'jsdoc/check-alignment': 'warn',
+      'jsdoc/check-examples': 'off', // Turn on after https://github.com/eslint/eslint/issues/14745 resolved
+      'jsdoc/check-indentation': 'off',
+      'jsdoc/check-line-alignment': [
+        'warn',
+        'always',
+        {
+          tags: [
+            'arg',
+            'argument',
+            'callback',
+            'param',
+            'property',
+            'prop',
+            'returns',
+            'return'
+          ],
+          customSpacings: {
+            postDelimiter: 1,
+            postTag: 1,
+            postType: 1,
+            postName: 1,
+            postHyphen: 1
+          }
+        }
+      ],
+      'jsdoc/check-param-names': 'error',
+      'jsdoc/check-property-names': 'error',
+      'jsdoc/check-syntax': 'error',
+      'jsdoc/check-tag-names': 'error',
+      'jsdoc/check-types': 'error',
+      'jsdoc/check-values': [
+        'error',
+        {
+          // allowedAuthors: [] // Enable and enter permitted authors if desired
+          // licensePattern: '' // Enable and enter license pattern if desired
+        }
+      ],
+      // 'jsdoc/convert-to-jsdoc-comments': 'off', // Currently experimental as of v48.8.3
       // 'jsdoc/empty-tags': 1,
       // 'jsdoc/implements-on-classes': 1,
       // 'jsdoc/match-description': 1,
@@ -978,6 +985,7 @@ export default [
       //   }
       // ],
       // 'jsdoc/valid-types': 1
+      // END: JSDoc eslint rules
     }
   }
 ];

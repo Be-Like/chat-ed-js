@@ -22,6 +22,17 @@ import HelloWorld from './components/HelloWorld.vue';
 
 const x = [1, 2, 3];
 
+/**
+ * @access public
+ * @author Jake Simpson
+ * @private
+ * @param {string[]} a
+ * @returns {string}
+ */
+const test = (a) => {
+  return 'hello'
+}
+
 // Is this ok?
 const y = [
   1,
